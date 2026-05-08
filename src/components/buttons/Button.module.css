@@ -6,4 +6,11 @@
 .btn {
     font-size: 3rem;
     width: fit-content;
+    margin: .2rem;
+}
+
+.disabledPattern{
+}
+
+.enabledPattern{
 }

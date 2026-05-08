@@ -1,14 +1,16 @@
 import styles from './Button.module.css'
 
 
-function Button(){
+function Button({btnName, disabled}){
 
     return (
         <>
-        <h1 className={styles.title}>AQUI VAI UM TESTE BOLADO</h1>
-        <button className={styles.btn}>First Button</button>
+        <button className={`${styles.btn} ${disabled === true ? styles.disabledPattern : styles.enabledPattern} `} 
+                disabled={disabled}>
+                    {btnName} - {disabled} - {typeof(disabled)} 
+        </button>
         </>
     )
-
 }
+
 export default Button
