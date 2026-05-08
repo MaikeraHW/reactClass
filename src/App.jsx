@@ -4,11 +4,14 @@ import Card from "./components/cards/Card"
 
 function App() {
 
+    const buttons = ["btn01", "btn02", "btn03", "btn04"]
+
   return (
     <>
-      <Button btnName="btn01" disabled={false}/>
-      <Button btnName="btn02" disabled/>
-      <Button btnName="btn03" disabled/>
+      {buttons.map((button, index) => (
+        <Button key={index} btnName={button} disabled={index % 2 !== 0 ? true : false} />
+      ))}
+      
       <Card title="Title -1" description="Description -1"/>
     </>
   )
