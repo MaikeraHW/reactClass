@@ -1,13 +1,14 @@
 import styles from './Button.module.css'
 
 
-function Button({btnName, aoClique}){
+function Button({btnName, onClick, disabled}){
     
     return (
         <>
-            <button className={styles.btn} onClick={aoClique}>{btnName}</button>
+            <button className={styles.btn} onClick={onClick} disabled={disabled}> {btnName} </button>
         </>
     )
 }
 
 export default Button
+

@@ -1,29 +1,17 @@
+import { useState } from "react"
 import Button from "./components/buttons/Button"
 
 
 function App() {
 
-  var contador = 0
 
-  function decrementar(){
-    if (contador === 0) {
-      contador
-    } else {
-  contador--
-    }
-  console.log(contador)
-  }
-  function incrementar(){
-  contador++
-  console.log(contador)
-  }
-
+  const [contador, setContador] = useState(0)
 
   return (
     <>
-      <Button btnName="Decrementar" aoClique={decrementar}/>
+      <Button btnName="Decrementar" onClick={() => setContador(contador === 0 ? contador : contador - 1)} disabled={contador === 0 ? true : false}/>
       <h1>{contador}</h1>
-      <Button btnName="Incrementar" aoClique={incrementar}/>
+      <Button btnName="Incrementar" onClick={() => setContador(contador + 1)} disabled={contador >= 20 ? true : false}/>
 
     </>
   )
