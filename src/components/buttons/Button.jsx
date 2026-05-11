@@ -1,19 +1,17 @@
 import styles from './Button.module.css'
 
 
-function Button({btnName, disabled}){
+function Button({btnName, aoClique}){
 
-    function btnClicado() {
-        alert(btnName)
+    var contador = 0
+    function decrementar(){
+      contador--
+      alert(contador)
     }
 
     return (
         <>
-        <button className={`${styles.btn} ${disabled === true ? styles.disabledPattern : styles.enabledPattern} `} 
-                disabled={disabled} onClick={() => btnClicado()}>
-                    {btnName} - {disabled} - {typeof(disabled)} 
-                
-        </button>
+            <button className={styles.btn} onClick={aoClique}>{btnName}</button>
         </>
     )
 }
