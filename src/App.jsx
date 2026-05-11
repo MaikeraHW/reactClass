@@ -4,8 +4,9 @@ import Button from "./components/buttons/Button"
 
 function App() {
 
-
-  const [contador, setContador] = useState(0)
+  // => use state retorna um array com: valor inicial [index 0] e uma função [index 1], a função é o que vai substituir o index 0 e renderizar os componentes que usam o valor
+  // => forma padrão de uso [umNome(valor inicial), setUmnome] = useState(valor inicial)
+  const [contador, setContador] = useState(0) 
 
   return (
     <>
