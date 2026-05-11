@@ -6,7 +6,11 @@ function App() {
   var contador = 0
 
   function decrementar(){
+    if (contador === 0) {
+      contador
+    } else {
   contador--
+    }
   console.log(contador)
   }
   function incrementar(){
